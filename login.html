@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tealive Staff Portal Login</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Main Style -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Toast Notification Container -->
+    <div id="toast-container" class="toast-container"></div>
+
+    <!-- LOGIN SCREEN -->
+    <div class="login-screen">
+        <div class="login-card glass">
+            <div class="login-header">
+                <div class="logo-row mb-md">
+                    <img src="images/logo-tealive.png" id="login-logo" alt="Tealive Logo" class="brand-logo">
+                    <img src="images/logo-UiTM.png" id="login-uitm-logo" alt="UiTM Logo" class="uitm-logo">
+                </div>
+                <h2>Knowledge Management Portal</h2>
+                <p>Select your profile role to access the workspace</p>
+            </div>
+            
+            <form id="login-form" class="login-form">
+                <div class="form-group">
+                    <label for="role-select">Select Profile / Role</label>
+                    <div class="select-wrapper">
+                        <select id="role-select" required>
+                            <option value="" disabled selected>Choose role...</option>
+                            <option value="tearista" data-name="Ikhmal">Tearistas & Frontline Staff (Ikhmal)</option>
+                            <option value="outlet_manager" data-name="Rogayah">Outlet Manager (Rogayah)</option>
+                            <option value="area_manager" data-name="Amier Zhafran">Area Manager (Amier Zhafran)</option>
+                            <option value="hq_management" data-name="Tengku Danial">HQ Management / Admin (Tengku Danial)</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="passcode-input">Access Code (Default: 1234)</label>
+                    <input type="password" id="passcode-input" placeholder="••••" required>
+                </div>
+
+                <button type="submit" class="btn btn-primary btn-block">
+                    <span>Enter Portal</span>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </button>
+                
+                <button type="button" class="btn btn-secondary btn-block mt-sm" id="back-to-public-btn">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
+                    <span>Back to Customer Homepage</span>
+                </button>
+            </form>
+            <div class="login-footer">
+                <p>Tealive KM Portal v1.0.0 &bull; Built for ICT608 Group Assignment</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Login Script -->
+    <script src="js/login.js"></script>
+</body>
+</html>
