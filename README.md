@@ -1,19 +1,20 @@
 # 🍵 Tealive Knowledge Management & Customer Portal
 
-A dual-access enterprise web prototype built for the **ICT608: Enterprise Knowledge Management Systems** course assignment at **UiTM**. This application acts as a public beverage menu for customers while offering a restricted, role-based **Knowledge Management (KM) Portal** to streamline operational routines, tacit knowledge sharing, and training for Tealive frontline Tearistas, Managers, and HQ Administrators.
+<p align="center">
+<img src="./images/logo-tealive.png" alt="Logo" width="500">
+</p>
 
----
-
-### 🛡️ Project Badges
+A dual-access enterprise web prototype. This application acts as a public beverage menu for customers while offering a restricted, role-based **Knowledge Management (KM) Portal** to streamline operational routines, tacit knowledge sharing, and training for Tealive frontline Tearistas, Managers, and HQ Administrators.
 
 [![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)](https://html.spec.whatwg.org/)
 [![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)](https://www.w3.org/Style/CSS/)
 [![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 [![License: MIT](https://img.shields.io/badge/License-MIT-purple?style=for-the-badge)](https://opensource.org/licenses/MIT)
 [![Status: Complete](https://img.shields.io/badge/Status-Complete-008f7a?style=for-the-badge)](#)
-[![Academic: UiTM](https://img.shields.io/badge/UiTM-Kelantan--Branch-4d1c8c?style=for-the-badge)](#)
 
 ---
+
+![footer](./images/bannergithub.png)
 
 ## 🚀 Key Features
 
@@ -87,15 +88,6 @@ Use the default passcode **`1234`** to log in as any staff role:
 | **Rogayah** | Outlet Manager | Managerial Tier | Machang Outlet #402 |
 | **Amier Zhafran** | Area Manager | Regional Auditor | Kelantan Region (8 Outlets) |
 | **Tengku Danial** | HQ Management | Administrator / Director | Global Corporate Hub |
-
----
-
-## 👥 Contributors (UiTM Assignment Group)
-
-* **Tengku Ahmad Danial Bin Tengku Noor Ashraf** - *HQ Admin / Director*
-  * [GitHub](https://github.com/KuDanial) &bull; [LinkedIn](https://www.linkedin.com/in/tengkuahmaddanial/) &bull; [YouTube](https://www.youtube.com/@tengkuahmaddanial)
-* **Ikhmal** - *Tearista*
-* **Nur Fasihah** - *Senior Tearista*
 
 ---
 *Developed for academic evaluation under course code ICT608 (Semester March - August 2026).*
