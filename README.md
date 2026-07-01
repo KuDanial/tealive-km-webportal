@@ -14,7 +14,7 @@ A dual-access enterprise web prototype. This application acts as a public bevera
 
 ---
 
-![footer](./images/bannergithub.png)
+![footer](./images/newgithubbanner.png)
 
 ## 🚀 Key Features
 
