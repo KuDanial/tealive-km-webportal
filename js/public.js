@@ -13,7 +13,8 @@ const customerMenu = [
     { id: "cm-7", name: "Bang Bang Chocolate", category: "bangbang", image: "images/bangbangchocolatedrinks.jpg", desc: "Indulgent premium chocolate paste swirled with fresh milk and brown sugar pearls.", price: "RM 11.50", cals: "340 kcal" },
     { id: "cm-8", name: "Bang Bang Coffee", category: "bangbang", image: "images/bangbangcoffeedrinks.jpg", desc: "A bold espresso shot paired with fresh milk, brown sugar, and warm tapioca pearls.", price: "RM 11.50", cals: "290 kcal" },
     { id: "cm-9", name: "Bang Bang Matcha Mousse", category: "bangbang", image: "images/bangbangmatchamoussedrinks.jpg", desc: "Earthy Japanese matcha topped with creamy cheese mousse, brown sugar, and pearls.", price: "RM 12.50", cals: "320 kcal" },
-    { id: "cm-10", name: "Bang Bang Hojicha Mousse", category: "bangbang", image: "images/bangbanghojichamoussedrinks.jpg", desc: "Aromatic roasted hojicha layer capped with cheese mousse, brown sugar, and pearls.", price: "RM 12.50", cals: "300 kcal" }
+    { id: "cm-10", name: "Bang Bang Hojicha Mousse", category: "bangbang", image: "images/bangbanghojichamoussedrinks.jpg", desc: "Aromatic roasted hojicha layer capped with cheese mousse, brown sugar, and pearls.", price: "RM 12.50", cals: "300 kcal" },
+    { id: "cm-11", name: "Bang Bang Ketum Pistachio Matcha Tea Iced Blend", category: "bangbang", image: "images/bangbangketumpistachiotea.png", desc: "Ketum is a tropical evergreen tree of the Rubiaceae family native to Southeast Asia.", price: "RM 67.50", cals: "0 kcal" }
 ];
 
 document.addEventListener("DOMContentLoaded", () => {
