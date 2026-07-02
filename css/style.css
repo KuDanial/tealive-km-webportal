@@ -2740,3 +2740,410 @@ body.dark-mode .noti-item.unread {
     margin-top: 4px;
     display: block;
 }
+
+/* Hide mobile elements on desktop by default */
+.mobile-menu-toggle, .sidebar-overlay {
+    display: none;
+}
+
+/* ========================================================
+   11. MOBILE RESPONSIVE STYLES (Viewport width <= 768px)
+   ======================================================== */
+@media (max-width: 768px) {
+    /* Base Overrides */
+    .content-body {
+        padding: 20px 16px;
+    }
+
+    /* Toast Notifications */
+    .toast-container {
+        left: 16px;
+        right: 16px;
+        bottom: 16px;
+        width: auto;
+    }
+    .toast {
+        min-width: unset;
+        max-width: 100%;
+        width: 100%;
+    }
+
+    /* Modals */
+    .modal-content {
+        width: calc(100% - 32px);
+        margin: 16px;
+        padding: 20px;
+    }
+
+    /* Public Customer Homepage */
+    .public-header {
+        flex-direction: column;
+        height: auto;
+        padding: 16px 20px;
+        gap: 16px;
+        align-items: center;
+        text-align: center;
+    }
+    .public-header .brand-logo {
+        margin-right: 0;
+        height: 32px;
+    }
+    .public-header .uitm-logo {
+        height: 34px;
+        padding-left: 12px;
+    }
+    .public-nav {
+        gap: 20px;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 100%;
+    }
+    .public-header-actions {
+        width: 100%;
+        justify-content: center;
+        gap: 12px;
+        flex-wrap: wrap;
+    }
+    .public-hero {
+        padding: 20px 16px;
+    }
+    .hero-banner-container {
+        height: 280px;
+    }
+    .hero-overlay-content {
+        padding: 24px;
+    }
+    .hero-overlay-content h1 {
+        font-size: 1.8rem;
+        margin-bottom: 8px;
+    }
+    .hero-overlay-content p {
+        font-size: 0.9rem;
+        margin-bottom: 16px;
+        max-width: 100%;
+    }
+    .public-menu-section {
+        padding: 0 16px 24px;
+    }
+    .title-centering h2 {
+        font-size: 1.6rem;
+    }
+    .public-about-section {
+        margin: 24px 16px;
+        padding: 24px 16px;
+    }
+    .about-content h2 {
+        font-size: 1.3rem;
+    }
+    .about-logos {
+        gap: 12px;
+        flex-wrap: wrap;
+    }
+
+    /* Login Screen */
+    .login-card {
+        width: calc(100% - 32px);
+        margin: 16px;
+        padding: 24px 20px;
+    }
+    .login-header {
+        margin-bottom: 24px;
+    }
+
+    /* Dashboard Layout & Header */
+    .mobile-menu-toggle {
+        display: inline-flex !important;
+        align-items: center;
+        justify-content: center;
+        background: rgba(0, 0, 0, 0.03);
+        border: 1px solid var(--border-glass);
+        color: var(--text-main);
+        width: 40px;
+        height: 40px;
+        border-radius: var(--border-radius-sm);
+        cursor: pointer;
+        padding: 0;
+        margin-right: 12px;
+        flex-shrink: 0;
+    }
+    body.dark-mode .mobile-menu-toggle {
+        background: rgba(255, 255, 255, 0.05);
+        color: white;
+    }
+    .sidebar {
+        transform: translateX(-100%);
+        transition: transform var(--transition-smooth), background-color var(--transition-smooth), border-color var(--transition-smooth);
+        box-shadow: 10px 0 25px rgba(0, 0, 0, 0.15);
+    }
+    body.dark-mode .sidebar {
+        box-shadow: 10px 0 25px rgba(0, 0, 0, 0.5);
+    }
+    .sidebar.open {
+        transform: translateX(0);
+    }
+    .sidebar-overlay {
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background: rgba(9, 7, 20, 0.4);
+        backdrop-filter: blur(4px);
+        -webkit-backdrop-filter: blur(4px);
+        z-index: 99;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity var(--transition-smooth);
+    }
+    .sidebar-overlay.active {
+        opacity: 1;
+        pointer-events: auto;
+    }
+    .main-content {
+        margin-left: 0;
+    }
+    .app-header {
+        padding: 0 16px;
+    }
+    .search-box {
+        max-width: 180px;
+    }
+    .search-box input {
+        padding: 8px 12px 8px 34px;
+        font-size: 0.85rem;
+    }
+    .search-box svg {
+        left: 10px;
+        width: 16px;
+        height: 16px;
+    }
+    .header-right {
+        gap: 12px;
+    }
+    .system-time {
+        display: none; /* Hide clock on mobile to save header space */
+    }
+    .notification-dropdown {
+        right: -40px;
+        width: 280px;
+    }
+
+    /* Dashboard Tab Layouts & Sections */
+    .section-title-bar {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+        margin-bottom: 20px;
+    }
+    .section-title-bar h2 {
+        font-size: 1.4rem;
+    }
+    .section-title-bar p {
+        font-size: 0.85rem;
+    }
+
+    /* Dashboard Home Tab */
+    .welcome-banner {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 20px;
+        gap: 16px;
+        margin-bottom: 20px;
+    }
+    .welcome-text h1 {
+        font-size: 1.5rem;
+    }
+    .welcome-text p {
+        font-size: 0.9rem;
+    }
+    .welcome-role-stats {
+        padding: 10px 14px;
+        width: 100%;
+    }
+    .dashboard-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+    .grid-item {
+        padding: 16px;
+    }
+
+    /* Digital SOPs Workspace */
+    .sop-workspace {
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        gap: 16px;
+    }
+    .sop-sidebar {
+        height: auto;
+        max-height: 300px;
+        overflow-y: auto;
+    }
+    .category-filters {
+        flex-direction: row;
+        overflow-x: auto;
+        white-space: nowrap;
+        padding-bottom: 8px;
+        border-bottom: 1px solid var(--border-glass);
+    }
+    .category-btn {
+        flex-shrink: 0;
+        padding: 6px 12px;
+        font-size: 0.8rem;
+    }
+    .sop-list {
+        max-height: 180px;
+    }
+    .sop-viewer {
+        height: auto;
+        min-height: 250px;
+        padding: 20px 16px;
+    }
+    .sop-viewer-header h1 {
+        font-size: 1.3rem;
+    }
+
+    /* Analytics Dashboard Workspace */
+    .metrics-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+    }
+    .metric-card {
+        padding: 14px;
+        height: 100px;
+    }
+    .metric-value {
+        font-size: 1.3rem;
+    }
+    .metric-trend {
+        font-size: 0.65rem;
+    }
+    .graphical-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+    .graph-card {
+        padding: 16px;
+    }
+    .graph-header h3 {
+        font-size: 0.95rem;
+    }
+    .analytics-table th, .analytics-table td {
+        padding: 10px 8px;
+        font-size: 0.78rem;
+    }
+    .analytics-lock-overlay {
+        padding: 20px 12px;
+    }
+    .lock-box {
+        padding: 20px;
+    }
+    .lock-box h3 {
+        font-size: 1.15rem;
+    }
+
+    /* Discussion Forum Workspace */
+    .forum-layout {
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        gap: 16px;
+    }
+    .forum-sidebar {
+        height: auto;
+        max-height: 300px;
+        overflow-y: auto;
+    }
+    .forum-categories {
+        flex-direction: row;
+        overflow-x: auto;
+        white-space: nowrap;
+        padding-bottom: 8px;
+        border-bottom: 1px solid var(--border-glass);
+    }
+    .forum-cat-btn {
+        flex-shrink: 0;
+        padding: 6px 12px;
+        font-size: 0.8rem;
+    }
+    .thread-list {
+        max-height: 180px;
+    }
+    .forum-conversation {
+        height: auto;
+        min-height: 250px;
+        padding: 20px 16px;
+    }
+    .convo-header h1 {
+        font-size: 1.2rem;
+    }
+    .convo-question-body {
+        font-size: 0.88rem;
+    }
+
+    /* Expert Directory Workspace */
+    .expert-workspace {
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        gap: 20px;
+    }
+    .expert-grid-column {
+        height: auto;
+    }
+    .expert-grid {
+        grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+        gap: 12px;
+        max-height: 320px;
+    }
+    .expert-card {
+        padding: 12px;
+        height: auto;
+        min-height: 200px;
+        gap: 10px;
+    }
+    .expert-avatar-lg {
+        width: 48px;
+        height: 48px;
+        font-size: 1.1rem;
+        margin-bottom: 6px;
+    }
+    .expert-card h3 {
+        font-size: 0.85rem;
+    }
+    .expert-card p {
+        font-size: 0.72rem;
+    }
+    .mentor-chat-panel {
+        height: 360px;
+        padding: 16px;
+    }
+    .chat-messages {
+        max-height: 200px;
+    }
+
+    /* LMS Training Workspace */
+    .lms-workspace {
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        gap: 20px;
+    }
+    .lms-sidebar {
+        height: auto;
+        max-height: 260px;
+        padding: 16px;
+    }
+    .course-list {
+        max-height: 180px;
+    }
+    .lms-player {
+        height: auto;
+        padding: 16px 12px;
+    }
+    .player-header h2 {
+        font-size: 1.1rem;
+    }
+}

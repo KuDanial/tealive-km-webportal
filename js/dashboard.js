@@ -435,6 +435,23 @@ function initApp() {
     document.getElementById("logout-button").addEventListener("click", handleLogout);
     document.querySelector(".logout-btn-trigger").addEventListener("click", handleLogout);
 
+    // Mobile Sidebar Toggle
+    const mobileMenuToggle = document.getElementById("mobile-menu-toggle");
+    const sidebar = document.querySelector(".sidebar");
+    const sidebarOverlay = document.getElementById("sidebar-overlay");
+
+    if (mobileMenuToggle && sidebar && sidebarOverlay) {
+        mobileMenuToggle.addEventListener("click", () => {
+            sidebar.classList.toggle("open");
+            sidebarOverlay.classList.toggle("active");
+        });
+
+        sidebarOverlay.addEventListener("click", () => {
+            sidebar.classList.remove("open");
+            sidebarOverlay.classList.remove("active");
+        });
+    }
+
     // Tab Navigation Buttons
     const navButtons = document.querySelectorAll(".nav-btn");
     navButtons.forEach(btn => {
@@ -671,6 +688,16 @@ function switchTab(tabName) {
 
     if (tabName === "analytics" && currentUser.role !== "Tearista") {
         setTimeout(renderAnalyticsGraphs, 100);
+    }
+
+    // Close sidebar on mobile
+    const sidebarEl = document.querySelector(".sidebar");
+    const sidebarOverlayEl = document.getElementById("sidebar-overlay");
+    if (sidebarEl && sidebarEl.classList.contains("open")) {
+        sidebarEl.classList.remove("open");
+    }
+    if (sidebarOverlayEl && sidebarOverlayEl.classList.contains("active")) {
+        sidebarOverlayEl.classList.remove("active");
     }
 }
 
