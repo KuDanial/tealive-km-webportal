@@ -65,7 +65,7 @@ portalweb/
 To preview and interact with the portal, run a simple local web server in the project directory:
 
 ### Option A: Python HTTP Server (Recommended)
-1. Open terminal in the `portalweb` folder.
+1. Open terminal in the `tealive-km-webportal` folder.
 2. Run:
    ```bash
    python -m http.server 8000
