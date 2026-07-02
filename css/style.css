@@ -172,6 +172,10 @@ body.dark-mode .card-glass {
     vertical-align: middle;
 }
 
+.public-header .brand-logo {
+    margin-right: 10px;
+}
+
 .uitm-logo {
     height: 46px;
     object-fit: contain;
